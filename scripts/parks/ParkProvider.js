@@ -1,14 +1,17 @@
+import {defaultKey} from "../Settings.js"
 
-import {graphhopperKey} from './scripts/Settings.js';
-graphhopperKey()
-
-
-
+let parks =[]
+export const useParks = () => {
+    return parks.slice()
+}
 export const getParks = () => {
-    return fetch("")
+    return fetch(`https://developer.nps.gov/api/v1/parks?api_key=${defaultKey.npsKey}&limit=10`)//change this fetch
         .then(response => response.json())
-        .then(parsedGetParks => {
-                getParks = parsedGetParks
+        .then(
+            parsedParks => {
+                console.log(parsedParks)
+                parks = parsedParks.data
+                console.log(parks)
             }
         )
 }
