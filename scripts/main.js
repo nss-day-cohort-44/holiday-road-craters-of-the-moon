@@ -1,3 +1,6 @@
-import "./parks/ParkProvider.js"
-import { getParks } from "./parks/ParkProvider.js"
-getParks()
+import { parkSelect } from "./parks/ParkSelect.js";
+import "./parks/ParkList.js"
+
+
+
+parkSelect()
