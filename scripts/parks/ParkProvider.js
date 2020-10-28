@@ -1,3 +1,4 @@
+
 import {defaultKey} from "../Settings.js"
 
 let parks =[]
@@ -9,9 +10,8 @@ export const getParks = () => {
         .then(response => response.json())
         .then(
             parsedParks => {
-                console.log(parsedParks)
                 parks = parsedParks.data
-                console.log(parks)
+                
             }
         )
 }
