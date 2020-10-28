@@ -1,0 +1,31 @@
+.header {border-style: solid;
+padding: 10% 10% 10%;
+display: flex;
+justify-content: space-evenly;
+}
+
+.navbar {border-style: solid;
+display: flex;
+justify-content: space-evenly;}
+
+.logo {border-style: solid;
+padding-inline-start: 20%;}
+
+.itinerary-preview {border-style: solid;
+border-color: black;
+padding: 20% 20% 20%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;}
+
+.plans {border-style: solid;
+border-color: black;
+padding-top: 20%;
+padding-bottom: 20%;}
+
+.saved-itinerary {
+    border-style: solid;
+    padding: 10% 10%;
+    align-self: flex-end;
+}
+
