@@ -1,8 +1,9 @@
 export const Bizarre = (bizarreObj) => {
     return `
     <p id="bizarries">
-        ${bizarreObj.businessName}
+        ${bizarreObj.name}
         <button class="bizarre-detail">Details</button>
         </p>
         `
 }
+

@@ -1,21 +1,52 @@
-export const EateryList = () => {
+import "./EateriesSelect.js"
+import { getEateries, useEateries } from "./EateryProvider.js"
+import { Eatery } from "./Eatery.js"
 
-    getEateries()
-        .then(() => {
-            const eateryArray = useEateries()
+const eventHub = document.querySelector(".container")
+const eateriesContainer = document.querySelector("#eateries")
 
-            let parkHTMLRepresentations = ""
+eventHub.addEventListener("eaterySelected", changeEvent => {
 
-            for (const park of parkArray) {
+    const selectedEateryName = changeEvent.detail.selectedEatery
+        const eateryArray = useEateries()
+        const theSelectedEatery = eateryArray.find(
+          (eateryObj) => eateryObj.businessName === selectedEateryName)
+          
+        render(theSelectedEatery)
+      })
 
-                eateryHTMLRepresentations += Eatery(eatery)
-                    
+      export const EateryList = () => {
+
+        getEateries()
+            .then(() => {
+                const eateryArray = useEateries()
+    
+                let eateryHTMLRepresentations = ""
+    
+                for (const eatery of eateryArray) {
+    
+                    eateryHTMLRepresentations += Eatery(eatery)
+                        
                     eateriesContainer.innerHTML = `
-                    <h3>Eateries</h3>
-          <section class="itinerary-preview">
-            ${eateryHTMLRepresentations}
-          </section>
-                    `
+                        <h3>Eateries</h3>
+              <section class="itinerary-preview">
+                ${eateryHTMLRepresentations}
+              </section>
+                        `
+                }
+            })
+        }
+
+        const render = (eateryObj) => {
+
+            const eateryHTMLRepresentions = Eatery(eateryObj)
+    
+                eateriesContainer.innerHTML = `
+                <h3>Eatery</h3>
+                <section id="eateries">
+                ${eateryHTMLRepresentions}
+                </section>
+                
+                
+                `
             }
-        })
-    }
