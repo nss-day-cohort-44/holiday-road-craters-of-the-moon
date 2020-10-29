@@ -1,6 +1,7 @@
+import { Park } from "./Park.js";
 import { useParks, getParks } from "./ParkProvider.js";
 
-
+Park
 
 const parksFilterContainer = document.querySelector(".nav-button-park")
 const eventHub = document.querySelector(".container")
@@ -23,12 +24,13 @@ render(parksArray)
                 ${parks.map(
                     parksObj => {
                         return `<option value="${parksObj.fullName}">${parksObj.fullName}</option>`
+                        
                     }
                 ).join("")
                 }
             </select>
         `
-    
+        
         }
     }
 
@@ -36,11 +38,13 @@ render(parksArray)
         if (changeEvent.target.id === "parkSelect") {
             // Get the name of the selected officer
             const selectedPark = changeEvent.target.value
+            
     
             // Define a custom event
             const customEvent = new CustomEvent("parkSelected", {
                 detail: {
-                    selectedPark: selectedPark
+                    selectedPark: selectedPark,
+        
                 }
             })
     console.log(customEvent)
