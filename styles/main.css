@@ -1,20 +1,15 @@
-.header {
-}
+
 
 .logo {
     background-repeat: no-repeat;
     width: 25%;
+    padding-inline-start: 20%;
 }
 
 .navbar {
     border-style: solid;
     display: flex;
     justify-content: space-evenly;
-}
-
-.logo {
-    border-style: solid;
-    padding-inline-start: 20%;
 }
 
 .itinerary-preview {
