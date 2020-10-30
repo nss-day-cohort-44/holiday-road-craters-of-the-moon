@@ -7,36 +7,6 @@ import { Park } from "./Park.js"
 const eventHub = document.querySelector(".container")
 const parksContainer = document.querySelector("#national-parks")
 
-// modal
-
-
-// // Get the modal
-// var modal = document.getElementById("myModal");
-
-// // Get the button that opens the modal
-// var btn = document.getElementById("myBtn");
-
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks on the button, open the modal
-// btn.onclick = function() {
-//   modal.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
-
-// This renders the selected park name to the DOM
 eventHub.addEventListener("parkSelected", changeEvent => {
 
     const selectedParkName = changeEvent.detail.selectedPark
@@ -44,14 +14,8 @@ eventHub.addEventListener("parkSelected", changeEvent => {
         const theSelectedPark = parkArray.find(
           (parksObj) => parksObj.fullName === selectedParkName)
           
-
-          const parkLocation = parkArray.find(
-            (parksObj) => parksObj.latLong === selectedParkName)
-
-        render(theSelectedPark, parkLocation)
+        render(theSelectedPark)
       })
-        
-//use a function like this to get the weather?
 
     
 
