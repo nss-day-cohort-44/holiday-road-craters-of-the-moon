@@ -8,7 +8,7 @@ export const useParks = () => {
     return parks.slice()
     
 }
-console.log(useParks)
+//console.log(useParks)
 export const getParks = () => {
     return fetch(`https://developer.nps.gov/api/v1/parks?api_key=${defaultKey.npsKey}`)//change this fetch
         .then(response => response.json())
