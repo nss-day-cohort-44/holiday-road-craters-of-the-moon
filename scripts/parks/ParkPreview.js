@@ -14,8 +14,14 @@ eventHub.addEventListener("parkSelected", changeEvent => {
         const theSelectedPark = parkArray.find(
           (parksObj) => parksObj.fullName === selectedParkName)
           
-        render(theSelectedPark)
+
+          const parkLocation = parkArray.find(
+            (parksObj) => parksObj.latLong === selectedParkName)
+
+        render(theSelectedPark, parkLocation)
       })
+        
+//use a function like this to get the weather?
 
     
 
