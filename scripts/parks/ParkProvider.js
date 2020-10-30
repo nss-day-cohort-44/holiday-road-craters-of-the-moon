@@ -1,7 +1,7 @@
 
 import {defaultKey} from "../Settings.js"
 
-const eventHub = document.querySelector(".container")
+
 
 let parks = []
 export const useParks = () => {

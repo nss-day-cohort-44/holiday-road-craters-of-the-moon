@@ -4,7 +4,7 @@ import { useParks, getParks } from "./ParkProvider.js";
 Park
 
 const parksFilterContainer = document.querySelector(".nav-button-park")
-const eventHub = document.querySelector(".container")
+const eventHub = document.querySelector("#mainContainer")
 //console.log(eventHub)
 
 export const parkSelect = () => {
@@ -53,17 +53,17 @@ eventHub.addEventListener("change", changeEvent => {
     }
 })
 
-eventhub.addEventListener("weatherSelect", change => {
-    if (change.target.id === "parkSelect") {
-        const weatherForPark = change.target.value
+// eventhub.addEventListener("weatherSelect", changeEvent => {
+//     if (changeEvent.target.id === "parkSelect") {
+//         const weatherForPark = change.target.value
 
-        const chooseWeather = new CustomEvent("weatherForPark", {
-            detail: {
-                weatherForPark: weatherForPark,
-            }
-        })
-        console.log(chooseWeather)
+//         const chooseWeather = new CustomEvent("weatherForPark", {
+//             detail: {
+//                 weatherForPark: weatherForPark,
+//             }
+//         })
+//         console.log(chooseWeather)
 
-        eventHub.dispatchEvent(chooseWeather)
-    }
-})
+//         eventHub.dispatchEvent(chooseWeather)
+//     }
+// })
