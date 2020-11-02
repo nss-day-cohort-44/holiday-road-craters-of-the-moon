@@ -6,7 +6,7 @@ getEateries
 
 const eateriesFilterContainer = document.querySelector(".nav-button-eatery")
 const eventHub = document.querySelector("#mainContainer")
-console.log("here", eventHub)
+// console.log("here", eventHub)
 
 export const eaterySelect = () => {
 
