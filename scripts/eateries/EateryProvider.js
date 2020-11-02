@@ -1,5 +1,5 @@
 
-const eventHub = document.querySelector(".container")
+
 
 let eateries = []
 export const useEateries = () => {

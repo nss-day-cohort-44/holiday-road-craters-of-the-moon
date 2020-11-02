@@ -2,7 +2,7 @@ import "./EateriesSelect.js"
 import { getEateries, useEateries } from "./EateryProvider.js"
 import { Eatery } from "./Eatery.js"
 
-const eventHub = document.querySelector(".container")
+const eventHub = document.querySelector("#mainContainer")
 const eateriesContainer = document.querySelector("#eateries")
 
 eventHub.addEventListener("eaterySelected", changeEvent => {

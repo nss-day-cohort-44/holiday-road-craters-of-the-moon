@@ -1,7 +1,7 @@
 export const Weather = (forecastObj) => {
     return `
     <p id="national-parks">
-        Forecast: ${forecastObj.}
+        Forecast: ${forecastObj.pizza}
         WAeather Info: ${forecastObj.weatherInfo}
         <button class="park-detail">Details</button>
         </p>

@@ -1,5 +1,5 @@
 
-const eventHub = document.querySelector(".container")
+
 
 let bizarries = []
 export const useBizarries = () => {

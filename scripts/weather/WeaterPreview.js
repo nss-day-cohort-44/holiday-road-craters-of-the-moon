@@ -4,7 +4,7 @@ import { Park } from "./Park.js"
 
 
 
-const eventHub = document.querySelector(".container")
+const eventHub = document.querySelector("#mainContainer")
 const parksContainer = document.querySelector("#national-parks")
 
 eventHub.addEventListener("parkSelected", changeEvent => {

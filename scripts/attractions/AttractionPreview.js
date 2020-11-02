@@ -2,7 +2,7 @@ import "./AttractionSelect.js"
 import { getBizarries, useBizarries } from "./AttractionProvider.js"
 import { Bizarre } from "./Attraction.js"
 
-const eventHub = document.querySelector(".container")
+const eventHub = document.querySelector("#mainContainer")
 const bizarriesContainer = document.querySelector("#bizarre-locations")
 
 eventHub.addEventListener("bizarreSelected", changeEvent => {

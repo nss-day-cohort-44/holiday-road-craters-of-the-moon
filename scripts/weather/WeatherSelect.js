@@ -1,6 +1,6 @@
 import { getWeather, useWeather } from "../weather/WeatherProvider.js"
 
-const eventHub = document.querySelector(".container")
+const eventHub = document.querySelector("#mainContainer")
 
 export const WeatherSelect = () => {
 

@@ -4,7 +4,7 @@ import { Bizarre } from "./Attraction.js"
 Bizarre
 
 const bizarriesFilterContainer = document.querySelector(".nav-button-bizarre")
-const eventHub = document.querySelector(".container")
+const eventHub = document.querySelector("#mainContainer")
 console.log("here", eventHub)
 
 export const bizarreSelect = () => {
