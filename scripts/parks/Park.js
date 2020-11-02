@@ -4,7 +4,7 @@ export const Park = (parkObj) => {
         ${parkObj.fullName}
         ${parkObj.latLong}
         
-        <button class="park-detail">Details</button>
+        <button id="park-detail--${parkObj.id}">Details</button>
     
         </p>
         `
@@ -12,17 +12,16 @@ export const Park = (parkObj) => {
 
 //  console.log("Full Name", parkObj.fullName)
  const eventHub = document.querySelector("#mainContainer")
- eventHub.addEventListener("click", (changeEvent) => {
-     const states = changeEvent.target.value
-     console.log("buttonClicked", changeEvent)
-     if (changeEvent.target.className === "park-detail"){
+ eventHub.addEventListener("click", (event) => {
+     if (event.target.id.startsWith("park-detail--")){
+        const [buttonName, parkId] = event.target.id.split("--")
+        
          const parkButtonClicked = new CustomEvent("parkButtonClicked",{
             detail: {
-                states: states
+                parkId: parkId
               }
             })
          eventHub.dispatchEvent(parkButtonClicked)
-         console.log("buttonClicked",eventHub)
      }
  
     
