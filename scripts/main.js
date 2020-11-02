@@ -8,6 +8,9 @@ import "./attractions/AttractionPreview.js";
 import "./parks/ParkDetails.js";
 import { useParks } from "./parks/ParkProvider.js";
 // import {renderDetailButton} from "./parks/ParkDetails.js"
+
+import "./attractions/AttractionDetails.js"
+
 useParks()
 parkSelect()
 eaterySelect()
