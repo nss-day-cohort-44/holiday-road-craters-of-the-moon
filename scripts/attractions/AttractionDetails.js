@@ -27,8 +27,8 @@ eventHub.addEventListener("bizarreButtonClicked", (eventObj) => {
      const contentTarget = document.querySelector(`#bizarre-locations`)
      contentTarget.innerHTML += `
      <div class="bizarre-detail">
-                 
                  <p>City: ${bizarreObj.city}</p>
+                 <p>State: ${bizarreObj.state}</p>
                  <p>Description: ${bizarreObj.description}</p>
                  
                  

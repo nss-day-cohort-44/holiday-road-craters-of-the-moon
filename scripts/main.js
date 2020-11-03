@@ -10,6 +10,9 @@ import { useParks } from "./parks/ParkProvider.js";
 // import {renderDetailButton} from "./parks/ParkDetails.js"
 
 import "./attractions/AttractionDetails.js"
+import "./eateries/Eatery.js"
+
+import "./eateries/EateryDetails.js"
 
 useParks()
 parkSelect()
