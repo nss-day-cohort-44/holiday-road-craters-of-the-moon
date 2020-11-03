@@ -14,10 +14,10 @@ import "./weather/WeatherProvider.js"
 
 import "./attractions/AttractionDetails.js"
 import "./eateries/Eatery.js"
-
-
+import { ItineraryForm } from "../Itinerary/ItineraryForm.js"
 import "./eateries/EateryDetails.js"
-//import { WeatherList } from "./weather/WeaterPreview.js";
+import { ItineraryList } from "../Itinerary/ItineraryList.js";
+
 
 useParks()
 parkSelect()
@@ -26,3 +26,6 @@ bizarreSelect()
 //WeatherList()
 
 // renderDetailButton()
+ItineraryList()
+ItineraryForm()
+

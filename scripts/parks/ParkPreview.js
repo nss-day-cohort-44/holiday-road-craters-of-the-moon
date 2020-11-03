@@ -49,6 +49,7 @@ eventHub.addEventListener("parkSelected", changeEvent => {
             (parksObj) => parksObj.latLong === selectedParkName)
 
         render(theSelectedPark, parkLocation)
+        // console.log(parkLocation)
       })
 
       
@@ -76,7 +77,7 @@ export const ParkList = () => {
           </section>
                     `
             }
-        })
+        }) 
     }
 
   
