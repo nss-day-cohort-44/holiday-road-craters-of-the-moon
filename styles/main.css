@@ -33,3 +33,10 @@
     align-self: flex-end;
 }
 
+.dropdown {
+    display: flex;
+    border-style: solid;
+    border-color: black;
+    /* justify-content: space-around; */
+    order: 1;
+}

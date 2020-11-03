@@ -2,32 +2,32 @@ export const Park = (parkObj) => {
     return `
     <p id="national-parks">
         ${parkObj.fullName}
-        ${parkObj.latLong}
+ 
+${parkObj.latLong}
         
-        <button id="park-detail--${parkObj.id}">Details</button>
-    
-        </p>
-        `
+<button id="park-detail--${parkObj.id}">Details</button>
+
+</p>
+`
 }
 
 //  console.log("Full Name", parkObj.fullName)
- const eventHub = document.querySelector("#mainContainer")
- eventHub.addEventListener("click", (event) => {
-     if (event.target.id.startsWith("park-detail--")){
-        const [buttonName, parkId] = event.target.id.split("--")
-        
-         const parkButtonClicked = new CustomEvent("parkButtonClicked",{
-            detail: {
-                parkId: parkId
-              }
-            })
-         eventHub.dispatchEvent(parkButtonClicked)
-     }
- 
-    
+const eventHub = document.querySelector("#mainContainer")
+eventHub.addEventListener("click", (event) => {
+if (event.target.id.startsWith("park-detail--")){
+const [buttonName, parkId] = event.target.id.split("--")
 
- })
+ const parkButtonClicked = new CustomEvent("parkButtonClicked",{
+    detail: {
+        parkId: parkId
+      }
+    })
+ eventHub.dispatchEvent(parkButtonClicked)
+}
 
+
+
+})
 // eventHub.dispatchEvent(myCustomEvent)
     // const [] = eventObj.target.data.split("--")
     
