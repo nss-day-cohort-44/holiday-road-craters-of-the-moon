@@ -49,7 +49,7 @@ eventHub.addEventListener("parkSelected", changeEvent => {
             (parksObj) => parksObj.latLong === selectedParkName)
 
         render(theSelectedPark, parkLocation)
-        console.log(parkLocation)
+        // console.log(parkLocation)
       })
         
 //use a function like this to get the weather?

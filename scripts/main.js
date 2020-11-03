@@ -11,8 +11,9 @@ import { useParks } from "./parks/ParkProvider.js";
 
 import "./attractions/AttractionDetails.js"
 import "./eateries/Eatery.js"
-
+import { ItineraryForm } from "../Itinerary/ItineraryForm.js"
 import "./eateries/EateryDetails.js"
+import { ItineraryList } from "../Itinerary/ItineraryList.js";
 
 useParks()
 parkSelect()
@@ -20,3 +21,6 @@ eaterySelect()
 bizarreSelect()
 
 // renderDetailButton()
+ItineraryList()
+ItineraryForm()
+
