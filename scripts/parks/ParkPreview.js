@@ -50,6 +50,8 @@ eventHub.addEventListener("parkSelected", changeEvent => {
 
         render(theSelectedPark, parkLocation)
       })
+
+      
         
 //use a function like this to get the weather?
 

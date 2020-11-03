@@ -9,14 +9,20 @@ import "./parks/ParkDetails.js";
 import { useParks } from "./parks/ParkProvider.js";
 // import {renderDetailButton} from "./parks/ParkDetails.js"
 
+import "./weather/WeatherProvider.js"
+//import "./weather/WeaterPreview.js"
+
 import "./attractions/AttractionDetails.js"
 import "./eateries/Eatery.js"
 
+
 import "./eateries/EateryDetails.js"
+//import { WeatherList } from "./weather/WeaterPreview.js";
 
 useParks()
 parkSelect()
 eaterySelect()
 bizarreSelect()
+//WeatherList()
 
 // renderDetailButton()

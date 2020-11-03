@@ -1,61 +1,60 @@
-import "./ParkSelect.js"
-import { getParks, useParks } from "./ParkProvider.js"
-import { Park } from "./Park.js"
 
+// import { getWeather, useWeather } from "./WeatherProvider.js"
+// import { useParks } from "../parks/ParkProvider.js"
+// import "../parks/Park.js"
 
+// const eventHub = document.querySelector("#mainContainer")
+// const parksContainer = document.querySelector("#national-parks")
 
-const eventHub = document.querySelector("#mainContainer")
-const parksContainer = document.querySelector("#national-parks")
+// eventHub.addEventListener("parkSelected", changeEvent => {
 
-eventHub.addEventListener("parkSelected", changeEvent => {
-
-    const selectedParkName = changeEvent.detail.selectedPark
-        const parkArray = useParks()
-        const theSelectedPark = parkArray.find(
-          (parksObj) => parksObj.fullName === selectedParkName)
+//     const selectedParkName = changeEvent.detail.selectedPark
+//         const parkArray = useParks()
+//         const theSelectedPark = parkArray.find(
+//           (parksObj) => parksObj.fullName === selectedParkName)
           
-        render(theSelectedPark)
-      })
+//         render(theSelectedPark)
+//       })
 
     
 
-export const ParkList = () => {
+// export const WeatherList = () => {
 
-    getParks()
-        .then(() => {
-            const parkArray = useParks()
+//     getWeather()
+//         .then(() => {
+//             const weatherArray = useWeather()
 
-            let parkHTMLRepresentations = ""
+//             let weatherHTMLRepresentations = ""
 
-            for (const park of parkArray) {
+//             for (const weather of weatherArray) {
 
-                parkHTMLRepresentations += Park(park)
+//                 weatherHTMLRepresentations += weather
                     
-                    parksContainer.innerHTML = `
-                    <h3>Parks</h3>
-          <section class="itinerary-preview">
-            ${parkHTMLRepresentations}
-          </section>
-                    `
-            }
-        })
-    }
+//                     weatherContainer.innerHTML = `
+//                     <h3>Parks</h3>
+//           <section class="itinerary-preview">
+//             ${weatherHTMLRepresentations}
+//           </section>
+//                     `
+//             }
+//         })
+//     }
 
   
-    // PUT IN BECAUSE RENDER WAS UNDEFINED
+//     // PUT IN BECAUSE RENDER WAS UNDEFINED
 
 
 
-    const render = (parkObj) => {
+//     const render = () => {
 
-        const parkHTMLRepresentions = Park(parkObj)
+//         const weatherHTMLRepresentions = 
 
-            parksContainer.innerHTML = `
-            <h3>Park</h3>
-            <section id="national-parks">
-            ${parkHTMLRepresentions}
-            </section>
+//             parksContainer.innerHTML = `
+//             <h3>Park</h3>
+//             <section id="national-parks">
+//             ${weatherHTMLRepresentions}
+//             </section>
             
             
-            `
-        }
+//             `
+//         }
